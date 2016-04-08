@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UniYo_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,136 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UniYo_Illustration" translatesAutoresizingMaskIntoConstraints="NO" id="RJ7-Gr-wn6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="RKK-tm-WAw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3N-gp-Mti" customClass="FacebookLogin" customModule="UniYo_App" customModuleProvider="target">
+                                <rect key="frame" x="155" y="356" width="291" height="56"/>
+                                <color key="backgroundColor" red="0.37254901960784315" green="0.8901960784313725" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="318" id="BfA-zW-2nZ"/>
+                                    <constraint firstAttribute="width" constant="318" id="JY9-hs-4gj"/>
+                                    <constraint firstAttribute="height" constant="56" id="NuH-Mh-QUZ"/>
+                                    <constraint firstAttribute="height" constant="62" id="RxE-JU-FAV"/>
+                                    <constraint firstAttribute="height" constant="62" id="YYo-kF-RVi"/>
+                                    <constraint firstAttribute="width" secondItem="C3N-gp-Mti" secondAttribute="height" multiplier="159:31" id="bBS-IB-f3H"/>
+                                    <constraint firstAttribute="width" secondItem="C3N-gp-Mti" secondAttribute="height" multiplier="291:56" id="gJT-Ft-Mg0"/>
+                                    <constraint firstAttribute="height" constant="62" id="orq-3C-b0a"/>
+                                    <constraint firstAttribute="width" constant="250" id="yMN-XU-n3u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="27"/>
+                                <state key="normal" title="Login with Facebook">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BfA-zW-2nZ"/>
+                                        <exclude reference="JY9-hs-4gj"/>
+                                        <exclude reference="RxE-JU-FAV"/>
+                                        <exclude reference="YYo-kF-RVi"/>
+                                        <exclude reference="bBS-IB-f3H"/>
+                                        <exclude reference="orq-3C-b0a"/>
+                                        <exclude reference="yMN-XU-n3u"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="© 2015 UniYo . Please read our Terms and FAQ before to sign up." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNA-nh-e4f">
+                                <rect key="frame" x="151" y="559" width="298" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="10"/>
+                                <color key="textColor" red="0.37254901959999998" green="0.89019607840000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZI-Rd-uSn" customClass="EmailLogin" customModule="UniYo_App" customModuleProvider="target">
+                                <rect key="frame" x="155" y="437" width="291" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="Ekd-7h-jLM"/>
+                                    <constraint firstAttribute="height" constant="62" id="Oag-xe-Tcb"/>
+                                    <constraint firstAttribute="width" constant="318" id="TI4-Qh-xKD"/>
+                                    <constraint firstAttribute="height" constant="62" id="Wv9-gi-Ahd"/>
+                                    <constraint firstAttribute="width" constant="318" id="hsN-fz-pAP"/>
+                                    <constraint firstAttribute="width" secondItem="CZI-Rd-uSn" secondAttribute="height" multiplier="291:56" id="ltW-E1-IzL"/>
+                                    <constraint firstAttribute="width" constant="318" id="qpd-fo-91o"/>
+                                    <constraint firstAttribute="width" secondItem="CZI-Rd-uSn" secondAttribute="height" multiplier="159:31" id="uV0-me-DD7"/>
+                                    <constraint firstAttribute="height" constant="62" id="vE2-6h-Zwb"/>
+                                    <constraint firstAttribute="height" constant="56" id="vlW-i6-0ps"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="27"/>
+                                <state key="normal" title="Login with your email">
+                                    <color key="titleColor" red="0.37254901959999998" green="0.89019607840000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ekd-7h-jLM"/>
+                                        <exclude reference="Oag-xe-Tcb"/>
+                                        <exclude reference="TI4-Qh-xKD"/>
+                                        <exclude reference="Wv9-gi-Ahd"/>
+                                        <exclude reference="hsN-fz-pAP"/>
+                                        <exclude reference="qpd-fo-91o"/>
+                                        <exclude reference="uV0-me-DD7"/>
+                                        <exclude reference="vE2-6h-Zwb"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="C3N-gp-Mti" secondAttribute="trailing" constant="50" id="4VZ-Hn-yz1"/>
+                            <constraint firstItem="CZI-Rd-uSn" firstAttribute="top" secondItem="C3N-gp-Mti" secondAttribute="bottom" constant="20" id="5SJ-Zd-64F"/>
+                            <constraint firstItem="C3N-gp-Mti" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="5qZ-UA-FW6"/>
+                            <constraint firstItem="C3N-gp-Mti" firstAttribute="top" secondItem="RJ7-Gr-wn6" secondAttribute="bottom" constant="69" id="6DM-ij-dV5"/>
+                            <constraint firstItem="CZI-Rd-uSn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B8h-FW-2mR"/>
+                            <constraint firstItem="CZI-Rd-uSn" firstAttribute="top" secondItem="C3N-gp-Mti" secondAttribute="bottom" constant="22" id="Jc8-3c-z2q"/>
+                            <constraint firstItem="CZI-Rd-uSn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PTX-Wy-Npr"/>
+                            <constraint firstItem="C3N-gp-Mti" firstAttribute="top" secondItem="RJ7-Gr-wn6" secondAttribute="bottom" constant="56" id="Y1p-sN-iSs"/>
+                            <constraint firstItem="C3N-gp-Mti" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y5o-DZ-xsL"/>
+                            <constraint firstItem="C3N-gp-Mti" firstAttribute="top" secondItem="RJ7-Gr-wn6" secondAttribute="bottom" constant="70" id="YoY-A1-mvg"/>
+                            <constraint firstItem="C3N-gp-Mti" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ypg-kc-Y3o"/>
+                            <constraint firstItem="C3N-gp-Mti" firstAttribute="top" secondItem="RJ7-Gr-wn6" secondAttribute="bottom" constant="56" id="c6M-li-AsR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CZI-Rd-uSn" secondAttribute="trailing" constant="121" id="cQI-C8-8vH"/>
+                            <constraint firstItem="CZI-Rd-uSn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gjA-2n-W0D"/>
+                            <constraint firstItem="C3N-gp-Mti" firstAttribute="top" secondItem="RJ7-Gr-wn6" secondAttribute="bottom" constant="56" id="gkO-9r-nly"/>
+                            <constraint firstAttribute="trailing" secondItem="RJ7-Gr-wn6" secondAttribute="trailing" id="h5u-J7-yua"/>
+                            <constraint firstItem="nNA-nh-e4f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jTI-pB-dYd"/>
+                            <constraint firstItem="RJ7-Gr-wn6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kNQ-zs-BUg"/>
+                            <constraint firstItem="CZI-Rd-uSn" firstAttribute="top" secondItem="C3N-gp-Mti" secondAttribute="bottom" constant="25" id="rdY-sH-Nsd"/>
+                            <constraint firstItem="CZI-Rd-uSn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="121" id="t0Z-iC-MZH"/>
+                            <constraint firstItem="RJ7-Gr-wn6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tN5-gs-KA5"/>
+                            <constraint firstItem="C3N-gp-Mti" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uG1-6m-HxC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nNA-nh-e4f" secondAttribute="bottom" constant="20" id="vKd-wU-gEZ"/>
+                            <constraint firstItem="RJ7-Gr-wn6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yc8-Sv-FbA"/>
+                            <constraint firstItem="CZI-Rd-uSn" firstAttribute="top" secondItem="C3N-gp-Mti" secondAttribute="bottom" constant="22" id="yie-zU-Th8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4VZ-Hn-yz1"/>
+                                <exclude reference="5qZ-UA-FW6"/>
+                                <exclude reference="6DM-ij-dV5"/>
+                                <exclude reference="Y1p-sN-iSs"/>
+                                <exclude reference="YoY-A1-mvg"/>
+                                <exclude reference="Ypg-kc-Y3o"/>
+                                <exclude reference="gkO-9r-nly"/>
+                                <exclude reference="uG1-6m-HxC"/>
+                                <exclude reference="5SJ-Zd-64F"/>
+                                <exclude reference="B8h-FW-2mR"/>
+                                <exclude reference="Jc8-3c-z2q"/>
+                                <exclude reference="cQI-C8-8vH"/>
+                                <exclude reference="gjA-2n-W0D"/>
+                                <exclude reference="t0Z-iC-MZH"/>
+                                <exclude reference="yie-zU-Th8"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="UniYo_Illustration" width="375" height="319"/>
+    </resources>
 </document>
