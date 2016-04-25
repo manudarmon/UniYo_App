@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4631E8F7DC926663206809DF /* Pods_UniYo_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293B0B194D53AED5DE689F83 /* Pods_UniYo_App.framework */; };
 		AF565B121CB6B80A00677FB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF565B111CB6B80A00677FB2 /* AppDelegate.swift */; };
 		AF565B141CB6B80A00677FB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF565B131CB6B80A00677FB2 /* ViewController.swift */; };
 		AF565B171CB6B80A00677FB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF565B151CB6B80A00677FB2 /* Main.storyboard */; };
@@ -14,9 +15,16 @@
 		AF565B1C1CB6B80A00677FB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF565B1A1CB6B80A00677FB2 /* LaunchScreen.storyboard */; };
 		AF565B281CB7ADC400677FB2 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF565B271CB7ADC400677FB2 /* MaterialView.swift */; };
 		AF565B2B1CB7B39700677FB2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF565B2A1CB7B39700677FB2 /* Constants.swift */; };
+		AF8B4DD41CC55AEC00331F4B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8B4DD31CC55AEC00331F4B /* Bolts.framework */; };
+		AF8B4DD71CC55C1D00331F4B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8B4DD51CC55C1D00331F4B /* FBSDKCoreKit.framework */; };
+		AF8B4DD81CC55C1D00331F4B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8B4DD61CC55C1D00331F4B /* FBSDKLoginKit.framework */; };
+		AFB21B0B1CCE95CF0036BE69 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB21B0A1CCE95CF0036BE69 /* DataService.swift */; };
+		AFB21B0D1CCEA26F0036BE69 /* EmailSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB21B0C1CCEA26F0036BE69 /* EmailSignUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		293B0B194D53AED5DE689F83 /* Pods_UniYo_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniYo_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A394C681D4C7E0F5DC96CDB /* Pods-UniYo_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniYo_App.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniYo_App/Pods-UniYo_App.release.xcconfig"; sourceTree = "<group>"; };
 		AF565B0E1CB6B80A00677FB2 /* UniYo_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniYo_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF565B111CB6B80A00677FB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF565B131CB6B80A00677FB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +34,12 @@
 		AF565B1D1CB6B80A00677FB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF565B271CB7ADC400677FB2 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		AF565B2A1CB7B39700677FB2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AF8B4DD31CC55AEC00331F4B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		AF8B4DD51CC55C1D00331F4B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		AF8B4DD61CC55C1D00331F4B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		AFB21B0A1CCE95CF0036BE69 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		AFB21B0C1CCEA26F0036BE69 /* EmailSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSignUpVC.swift; sourceTree = "<group>"; };
+		FBCFBBBA526583AF0A062E2E /* Pods-UniYo_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniYo_App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UniYo_App/Pods-UniYo_App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +47,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8B4DD41CC55AEC00331F4B /* Bolts.framework in Frameworks */,
+				AF8B4DD71CC55C1D00331F4B /* FBSDKCoreKit.framework in Frameworks */,
+				AF8B4DD81CC55C1D00331F4B /* FBSDKLoginKit.framework in Frameworks */,
+				4631E8F7DC926663206809DF /* Pods_UniYo_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4582D23AEB2B335FC5FE2DEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FBCFBBBA526583AF0A062E2E /* Pods-UniYo_App.debug.xcconfig */,
+				5A394C681D4C7E0F5DC96CDB /* Pods-UniYo_App.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		606649F8E8A765FCE9C2FE28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				293B0B194D53AED5DE689F83 /* Pods_UniYo_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AF565B051CB6B80A00677FB2 = {
 			isa = PBXGroup;
 			children = (
 				AF565B101CB6B80A00677FB2 /* UniYo_App */,
 				AF565B0F1CB6B80A00677FB2 /* Products */,
+				4582D23AEB2B335FC5FE2DEB /* Pods */,
+				606649F8E8A765FCE9C2FE28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +95,8 @@
 		AF565B101CB6B80A00677FB2 /* UniYo_App */ = {
 			isa = PBXGroup;
 			children = (
+				AFB21B091CCE95AC0036BE69 /* Services */,
+				AF8B4DD21CC55A9500331F4B /* Frameworks */,
 				AF565B291CB7B37C00677FB2 /* Util */,
 				AF565B261CB6B82500677FB2 /* Ressources */,
 				AF565B251CB6B81C00677FB2 /* Controller */,
@@ -91,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				AF565B131CB6B80A00677FB2 /* ViewController.swift */,
+				AFB21B0C1CCEA26F0036BE69 /* EmailSignUpVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -110,6 +150,24 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		AF8B4DD21CC55A9500331F4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF8B4DD51CC55C1D00331F4B /* FBSDKCoreKit.framework */,
+				AF8B4DD61CC55C1D00331F4B /* FBSDKLoginKit.framework */,
+				AF8B4DD31CC55AEC00331F4B /* Bolts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFB21B091CCE95AC0036BE69 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AFB21B0A1CCE95CF0036BE69 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF565B201CB6B80A00677FB2 /* Build configuration list for PBXNativeTarget "UniYo_App" */;
 			buildPhases = (
+				BDB46819361E598438C40534 /* Check Pods Manifest.lock */,
 				AF565B0A1CB6B80A00677FB2 /* Sources */,
 				AF565B0B1CB6B80A00677FB2 /* Frameworks */,
 				AF565B0C1CB6B80A00677FB2 /* Resources */,
+				E93527AAFAFDE78A8B214A25 /* Embed Pods Frameworks */,
+				DF1EEAE8CDCB46C4D281831C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,6 +237,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BDB46819361E598438C40534 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF1EEAE8CDCB46C4D281831C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniYo_App/Pods-UniYo_App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E93527AAFAFDE78A8B214A25 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UniYo_App/Pods-UniYo_App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AF565B0A1CB6B80A00677FB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -185,6 +294,8 @@
 				AF565B141CB6B80A00677FB2 /* ViewController.swift in Sources */,
 				AF565B121CB6B80A00677FB2 /* AppDelegate.swift in Sources */,
 				AF565B2B1CB7B39700677FB2 /* Constants.swift in Sources */,
+				AFB21B0B1CCE95CF0036BE69 /* DataService.swift in Sources */,
+				AFB21B0D1CCEA26F0036BE69 /* EmailSignUpVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,8 +406,13 @@
 		};
 		AF565B211CB6B80A00677FB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBCFBBBA526583AF0A062E2E /* Pods-UniYo_App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UniYo_App",
+				);
 				INFOPLIST_FILE = UniYo_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.emmanueldarmon.UniYo-App";
@@ -306,8 +422,13 @@
 		};
 		AF565B221CB6B80A00677FB2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A394C681D4C7E0F5DC96CDB /* Pods-UniYo_App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/UniYo_App",
+				);
 				INFOPLIST_FILE = UniYo_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.emmanueldarmon.UniYo-App";

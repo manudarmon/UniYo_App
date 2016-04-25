@@ -7,19 +7,70 @@
 //
 
 import UIKit
+import Firebase
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil {
+            self.performSegueWithIdentifier(SEGUE_LOG_IN, sender: nil)
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func BtnFbkPressed(sender: UIButton!) {
+        
+        // ####### FACEBOOK LOGIN START #######
+        let ref = Firebase(url: "https://uniyo.firebaseio.com")
+        let facebookLogin = FBSDKLoginManager()
+        facebookLogin.logInWithReadPermissions(["email"], handler: {
+            (facebookResult, facebookError) -> Void in
+            
+            if facebookError != nil {
+                print("Facebook login failed. Error \(facebookError)")
+            } else if facebookResult.isCancelled {
+                print("Facebook login was cancelled.")
+            } else {
+                let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+                ref.authWithOAuthProvider("facebook", token: accessToken,
+                    withCompletionBlock: { error, authData in
+                        if error != nil {
+                            print("Login failed. \(error)")
+                        } else {
+                            print("Logged in! \(authData)")
+        // ####### FACEBOOK LOGIN END #######
+                            
+                            // ####### STORING USER DATA START #######
+                            DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                                
+                                if error != nil {
+                                    print("Login failed. \(error)")
+                                } else {
+                                    print("Loged in!\(authData)")
+                                    
+                                    let user = ["provider": authData.provider!]
+                                    DataService.ds.createFirebaseUSer(authData.uid, user: user)
+                                    
+                                    NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
+                                    self.performSegueWithIdentifier(SEGUE_SIGN_UP, sender: nil)
+                                }
+                            // ####### STORING USER DATA END #######
+                            
+                        })
+                    }
+                })
+            }
+        })
+    
     }
-
 
 }
 
