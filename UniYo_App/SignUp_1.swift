@@ -32,10 +32,8 @@ class SignUp_1: UIViewController {
     }
     
     func newCampus(campus: String!) {
-        let campus: Dictionary<String, String> = ["Campus name": campusField.text!]
-        let firebaseCampus = DataService.ds.REF_USER_CURRENT.childByAutoId()
-        firebaseCampus.setValue(campus)
-        
+        let campus: Dictionary<String, String> = ["Campus": campusField.text!]
+        DataService.ds.REF_USER_CURRENT.updateChildValues(campus)
         campusField.text = ""
     }
 }
