@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4631E8F7DC926663206809DF /* Pods_UniYo_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293B0B194D53AED5DE689F83 /* Pods_UniYo_App.framework */; };
+		AF3B57591CD102B10096BDB3 /* SignUp_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3B57581CD102B10096BDB3 /* SignUp_1.swift */; };
 		AF565B121CB6B80A00677FB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF565B111CB6B80A00677FB2 /* AppDelegate.swift */; };
 		AF565B141CB6B80A00677FB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF565B131CB6B80A00677FB2 /* ViewController.swift */; };
 		AF565B171CB6B80A00677FB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF565B151CB6B80A00677FB2 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		293B0B194D53AED5DE689F83 /* Pods_UniYo_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniYo_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A394C681D4C7E0F5DC96CDB /* Pods-UniYo_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniYo_App.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniYo_App/Pods-UniYo_App.release.xcconfig"; sourceTree = "<group>"; };
+		AF3B57581CD102B10096BDB3 /* SignUp_1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp_1.swift; sourceTree = "<group>"; };
 		AF565B0E1CB6B80A00677FB2 /* UniYo_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniYo_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF565B111CB6B80A00677FB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF565B131CB6B80A00677FB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				AF565B131CB6B80A00677FB2 /* ViewController.swift */,
 				AFB21B0C1CCEA26F0036BE69 /* EmailSignUpVC.swift */,
+				AF3B57581CD102B10096BDB3 /* SignUp_1.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF565B281CB7ADC400677FB2 /* MaterialView.swift in Sources */,
+				AF3B57591CD102B10096BDB3 /* SignUp_1.swift in Sources */,
 				AF565B141CB6B80A00677FB2 /* ViewController.swift in Sources */,
 				AF565B121CB6B80A00677FB2 /* AppDelegate.swift in Sources */,
 				AF565B2B1CB7B39700677FB2 /* Constants.swift in Sources */,

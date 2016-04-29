@@ -38,14 +38,18 @@ class EmailSignUpVC: UIViewController {
                             } else {
                                 NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
                                 
+                                
+                                // ####### START SAVE DATA IN FIREBASE #######
+
                                 DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: {
                                     err, authData in
                                     
-                                    let user = ["provider": authData.provider!]
-                                    DataService.ds.createFirebaseUSer(authData.uid, user: user)
-                                    
+                                    let user = ["provider": authData.provider!, "email": email, "Password": pwd]
+                                    DataService.ds.createFirebaseUser(authData.uid, user: user)
                                     
                                 })
+                                
+                                // ####### END SAVE DATA IN FIREBASE #######
                                 
                                 self.performSegueWithIdentifier(SEGUE_EMAIL_SIGN_UP, sender: nil)
                                 

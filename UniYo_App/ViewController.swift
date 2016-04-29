@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     @IBAction func BtnFbkPressed(sender: UIButton!) {
         
         // ####### FACEBOOK LOGIN START #######
-        let ref = Firebase(url: "https://uniyo.firebaseio.com")
+        let ref = Firebase(url: "URL_BASE")
         let facebookLogin = FBSDKLoginManager()
         facebookLogin.logInWithReadPermissions(["email"], handler: {
             (facebookResult, facebookError) -> Void in
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
                                     print("Loged in!\(authData)")
                                     
                                     let user = ["provider": authData.provider!]
-                                    DataService.ds.createFirebaseUSer(authData.uid, user: user)
+                                    DataService.ds.createFirebaseUser(authData.uid, user: user)
                                     
                                     NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
                                     self.performSegueWithIdentifier(SEGUE_SIGN_UP, sender: nil)
