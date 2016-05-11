@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class SignUp_1: UIViewController {
+class SignUpCampus: UIViewController {
     @IBOutlet weak var campusField: UITextField!
 
     override func viewDidLoad() {
@@ -18,7 +18,7 @@ class SignUp_1: UIViewController {
     
     @IBAction func campusContinue(sender: UIButton!) {
         if let campus = campusField.text where campus != "" {
-            newCampus(campus)
+            addCampus(campus)
         } else {
             showErrorAllert("Campus required", msg: "Where are you studying?")
         }
@@ -31,10 +31,11 @@ class SignUp_1: UIViewController {
         presentViewController(alert, animated: true, completion: nil)
     }
     
-    func newCampus(campus: String!) {
+    func addCampus(campus: String!) {
         let campus: Dictionary<String, String> = ["Campus": campusField.text!]
         DataService.ds.REF_USER_CURRENT.updateChildValues(campus)
+        //let campusID = DataService.ds.REF_CAMPUSES.childByAutoId()
+        //campusID.setValue(campusField.text!)
         campusField.text = ""
     }
 }
-

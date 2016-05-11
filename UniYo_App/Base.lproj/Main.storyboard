@@ -311,10 +311,10 @@
             </objects>
             <point key="canvasLocation" x="355" y="1214"/>
         </scene>
-        <!--Sign Up1-->
+        <!--Sign Up Campus-->
         <scene sceneID="hCI-cm-5TJ">
             <objects>
-                <viewController id="FH8-z3-JUH" customClass="SignUp_1" customModule="UniYo_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FH8-z3-JUH" customClass="SignUpCampus" customModule="UniYo_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oLB-dl-iWc"/>
                         <viewControllerLayoutGuide type="bottom" id="K7q-3J-fPX"/>
@@ -409,6 +409,7 @@
                                 <connections>
                                     <action selector="attemptLogin:" destination="DYU-eR-jXB" eventType="touchUpInside" id="eMj-3r-KI3"/>
                                     <action selector="campusContinue:" destination="FH8-z3-JUH" eventType="touchUpInside" id="oJo-ON-b9f"/>
+                                    <segue destination="9SG-un-Icf" kind="show" id="jxT-17-zix"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -432,6 +433,177 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zln-ev-uuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1268" y="1214"/>
+        </scene>
+        <!--Sign Up Study Field-->
+        <scene sceneID="IHC-38-Xd0">
+            <objects>
+                <viewController id="9SG-un-Icf" customClass="SignUpStudyField" customModule="UniYo_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="erS-2F-019"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZLG-Fu-tmC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lMQ-Zp-8A4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study fields" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJx-R1-rER">
+                                <rect key="frame" x="132" y="80" width="337" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="8WC-xJ-kgR"/>
+                                    <constraint firstAttribute="height" constant="43" id="Onz-io-3aX"/>
+                                    <constraint firstAttribute="height" constant="43" id="ccf-tf-pKr"/>
+                                    <constraint firstAttribute="width" constant="297" id="eyR-KT-Hro"/>
+                                    <constraint firstAttribute="width" constant="337" id="weF-h3-Hle"/>
+                                    <constraint firstAttribute="width" constant="261" id="zJW-jk-Z1n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8WC-xJ-kgR"/>
+                                        <exclude reference="Onz-io-3aX"/>
+                                        <exclude reference="eyR-KT-Hro"/>
+                                        <exclude reference="zJW-jk-Z1n"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are your major and minor? One is enough." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xps-pj-MW3">
+                                <rect key="frame" x="140" y="106" width="320" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="17H-d7-Mtc"/>
+                                    <constraint firstAttribute="height" constant="43" id="7Jl-VJ-tvD"/>
+                                    <constraint firstAttribute="width" constant="261" id="Ig6-Nw-1Ci"/>
+                                    <constraint firstAttribute="width" constant="320" id="RhE-MK-luX"/>
+                                    <constraint firstAttribute="width" constant="289" id="Zzx-ZY-a8e"/>
+                                    <constraint firstAttribute="width" constant="261" id="dto-uK-UYa"/>
+                                    <constraint firstAttribute="height" constant="43" id="iG3-cv-TXY"/>
+                                    <constraint firstAttribute="height" constant="43" id="p5A-jA-DhD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="17H-d7-Mtc"/>
+                                        <exclude reference="7Jl-VJ-tvD"/>
+                                        <exclude reference="Ig6-Nw-1Ci"/>
+                                        <exclude reference="Zzx-ZY-a8e"/>
+                                        <exclude reference="dto-uK-UYa"/>
+                                        <exclude reference="iG3-cv-TXY"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Computer Science" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kOS-O8-qkJ" userLabel="Email Field">
+                                <rect key="frame" x="65" y="245" width="471" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="471" id="0bL-MO-eHr"/>
+                                    <constraint firstAttribute="width" constant="471" id="2IM-xd-rDZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="j0F-fg-Ju0"/>
+                                    <constraint firstAttribute="height" constant="30" id="pjf-S6-pOg"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0bL-MO-eHr"/>
+                                        <exclude reference="j0F-fg-Ju0"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Art History" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aE0-mG-1S0" userLabel="Email Field">
+                                <rect key="frame" x="65" y="340" width="471" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="471" id="WXU-su-USQ"/>
+                                    <constraint firstAttribute="width" constant="471" id="dUJ-3e-VhP"/>
+                                    <constraint firstAttribute="height" constant="30" id="s9V-Cb-aUV"/>
+                                    <constraint firstAttribute="height" constant="30" id="uif-An-Dx8"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dUJ-3e-VhP"/>
+                                        <exclude reference="uif-An-Dx8"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB5-kP-a1S" customClass="EmailLogin" customModule="UniYo_App" customModuleProvider="target">
+                                <rect key="frame" x="155" y="453" width="291" height="56"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="318" id="9P3-si-CiX"/>
+                                    <constraint firstAttribute="height" constant="62" id="IB6-3A-y6f"/>
+                                    <constraint firstAttribute="width" constant="318" id="YLc-BT-sAj"/>
+                                    <constraint firstAttribute="height" constant="56" id="aRR-q8-hzb"/>
+                                    <constraint firstAttribute="height" constant="62" id="aSj-nf-qcb"/>
+                                    <constraint firstAttribute="height" constant="56" id="aqx-M5-jIy"/>
+                                    <constraint firstAttribute="height" constant="62" id="fno-Cq-KXK"/>
+                                    <constraint firstAttribute="width" constant="250" id="fx9-q3-p2m"/>
+                                    <constraint firstAttribute="height" constant="56" id="iPN-cX-BIe"/>
+                                    <constraint firstAttribute="width" secondItem="YB5-kP-a1S" secondAttribute="height" multiplier="159:31" id="n7k-li-wUe"/>
+                                    <constraint firstAttribute="width" secondItem="YB5-kP-a1S" secondAttribute="height" multiplier="291:56" id="oSz-b1-D0D"/>
+                                    <constraint firstAttribute="width" secondItem="YB5-kP-a1S" secondAttribute="height" multiplier="291:56" id="tuc-X2-9FZ"/>
+                                    <constraint firstAttribute="width" constant="291" id="xPP-OT-ccp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="27"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="0.37254901959999998" green="0.89019607840000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9P3-si-CiX"/>
+                                        <exclude reference="IB6-3A-y6f"/>
+                                        <exclude reference="YLc-BT-sAj"/>
+                                        <exclude reference="aSj-nf-qcb"/>
+                                        <exclude reference="aqx-M5-jIy"/>
+                                        <exclude reference="fno-Cq-KXK"/>
+                                        <exclude reference="fx9-q3-p2m"/>
+                                        <exclude reference="iPN-cX-BIe"/>
+                                        <exclude reference="n7k-li-wUe"/>
+                                        <exclude reference="oSz-b1-D0D"/>
+                                        <exclude reference="tuc-X2-9FZ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="attemptLogin:" destination="DYU-eR-jXB" eventType="touchUpInside" id="bLp-P2-kxi"/>
+                                    <action selector="campusContinue:" destination="FH8-z3-JUH" eventType="touchUpInside" id="FYS-uu-nLI"/>
+                                    <action selector="studyFieldContinue:" destination="9SG-un-Icf" eventType="touchUpInside" id="OfR-dR-FRV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.37254901959999998" green="0.89019607840000003" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xps-pj-MW3" firstAttribute="top" secondItem="erS-2F-019" secondAttribute="bottom" constant="86" id="Clx-GS-Cir"/>
+                            <constraint firstItem="kOS-O8-qkJ" firstAttribute="top" secondItem="xps-pj-MW3" secondAttribute="bottom" constant="96" id="E5T-xW-RNx"/>
+                            <constraint firstItem="YB5-kP-a1S" firstAttribute="centerX" secondItem="lMQ-Zp-8A4" secondAttribute="centerX" id="I7m-zS-FNR"/>
+                            <constraint firstItem="xps-pj-MW3" firstAttribute="centerX" secondItem="lMQ-Zp-8A4" secondAttribute="centerX" id="QTj-XK-VG1"/>
+                            <constraint firstItem="jJx-R1-rER" firstAttribute="centerX" secondItem="lMQ-Zp-8A4" secondAttribute="centerX" id="RoX-nL-3tn"/>
+                            <constraint firstItem="YB5-kP-a1S" firstAttribute="width" secondItem="YB5-kP-a1S" secondAttribute="height" multiplier="291:56" id="VzG-Ff-E5y"/>
+                            <constraint firstItem="jJx-R1-rER" firstAttribute="top" secondItem="erS-2F-019" secondAttribute="bottom" constant="60" id="Yul-9M-FGS"/>
+                            <constraint firstItem="kOS-O8-qkJ" firstAttribute="centerX" secondItem="lMQ-Zp-8A4" secondAttribute="centerX" id="aGj-4z-zHM"/>
+                            <constraint firstItem="YB5-kP-a1S" firstAttribute="width" secondItem="YB5-kP-a1S" secondAttribute="height" multiplier="291:56" id="dCa-uH-c4h"/>
+                            <constraint firstItem="ZLG-Fu-tmC" firstAttribute="top" secondItem="YB5-kP-a1S" secondAttribute="bottom" constant="91" id="hug-0A-sNY"/>
+                            <constraint firstItem="aE0-mG-1S0" firstAttribute="centerX" secondItem="lMQ-Zp-8A4" secondAttribute="centerX" id="ryc-CP-WaF"/>
+                            <constraint firstItem="aE0-mG-1S0" firstAttribute="top" secondItem="kOS-O8-qkJ" secondAttribute="bottom" constant="65" id="t7R-CV-bH5"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VzG-Ff-E5y"/>
+                                <exclude reference="dCa-uH-c4h"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="studyField1" destination="kOS-O8-qkJ" id="Uq3-7V-wSg"/>
+                        <outlet property="studyField2" destination="aE0-mG-1S0" id="uAS-4Y-qpl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="op4-X9-BWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1983" y="1214"/>
         </scene>
     </scenes>
     <resources>

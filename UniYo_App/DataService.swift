@@ -14,10 +14,10 @@ let URL_BASE = "https://uniyo.firebaseio.com/"
 
 class DataService {
     static let ds = DataService()
-    
+
         private var _REF_BASE = Firebase(url: "\(URL_BASE)")
         private var _REF_USERS = Firebase(url: "\(URL_BASE)/users")
-        
+    
         var REF_BASE : Firebase {
             return _REF_BASE
         }
@@ -35,4 +35,13 @@ class DataService {
         func createFirebaseUser(uid: String, user: Dictionary<String, String>) {
             REF_USERS.childByAppendingPath(uid).setValue(user)
         }
+
+    
+    
+//ADD CAMPUS NAMES LIST IN FIREBASE
+//private var _REF_CAMPUSES = Firebase(url: "\(URL_BASE)/campuses")
+//var REF_CAMPUSES : Firebase {
+//return _REF_CAMPUSES
+//}
+
 }
