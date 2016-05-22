@@ -42,25 +42,25 @@ class ViewController: UIViewController {
             } else {
                 let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
                 let credential = FIRFacebookAuthProvider.credentialWithAccessToken(accessToken)
-                FIRAuth.auth()?.signInWithCredential(credential) { user, error in
+                FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
                         if error != nil {
                             print("Login failed. \(error)")
                         } else {
-                            print("Logged in! \(authData)")
+                            print("Logged in! \(user!.uid)")
                             // ####### FACEBOOK LOGIN END #######
                             
                             // ####### STORING USER DATA START #######
-                            DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                            DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { (user, error) in
                                 
                                 if error != nil {
                                     print("Login failed. \(error)")
                                 } else {
-                                    print("Loged in!\(authData)")
+                                    print("Loged in!\(user!.uid)")
                                     
-                                    let user = ["provider": authData.provider!]
-                                    DataService.ds.createFirebaseUser(authData.uid, user: user)
+                                    let user = ["provider": user!.provider!]
+                                    DataService.ds.createFirebaseUser(user!.uid, user: user!.uid)
                                     
-                                    NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
+                                    NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: KEY_UID)
                                     self.performSegueWithIdentifier(SEGUE_SIGN_UP, sender: nil)
                                 }
                                 // ####### STORING USER DATA END #######
