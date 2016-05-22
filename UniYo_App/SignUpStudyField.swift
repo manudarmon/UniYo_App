@@ -22,18 +22,15 @@ class SignUpStudyField: UIViewController {
     @IBAction func studyFieldContinue(sender: UIButton!) {
         let sField1 = studyField1.text
         let sField2 = studyField2.text
+        
+        
         if sField1 == "" && sField2 == "" {
-            showErrorAllert("Campus required", msg: "Where are you studying?")
-        } else if sField1 != "" && sField2 == "" {
-            addStudyField1(sField1)
-        } else if sField1 == "" && sField2 != "" {
-            addStudyField2(sField2)
-        } else if sField1 != "" && sField2 != "" {
-            addStudyField1(sField1)
-            addStudyField2(sField2)
+            showErrorAllert("At least one sf required", msg: "What are you studying?")
+        } else {
+            addStudyField("Study field 1", studyTextField: studyField1);
+            addStudyField("Study field 2", studyTextField: studyField2);
         }
     }
-    
     
     func showErrorAllert(title: String, msg: String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
@@ -42,17 +39,11 @@ class SignUpStudyField: UIViewController {
         presentViewController(alert, animated: true, completion: nil)
     }
     
-    func addStudyField1(sField1: String!) {
-        let sField1: Dictionary<String, String> = ["Study field 1": studyField1.text!]
-        DataService.ds.REF_USER_CURRENT.updateChildValues(sField1)
-        studyField1.text = ""
+    func addStudyField(keyName: String!, studyTextField: UITextField!) {
+        if studyTextField.text != "" {
+            let course: Dictionary<String, String> = [keyName: studyTextField.text!]
+            DataService.ds.REF_USER_CURRENT.updateChildValues(course)
+            studyTextField.text = ""
+        }
     }
-    
-    func addStudyField2(sField2: String!) {
-        let sField2: Dictionary<String, String> = ["Study field 2": studyField2.text!]
-        DataService.ds.REF_USER_CURRENT.updateChildValues(sField2)
-        studyField2.text = ""
-    }
-
-    
 }

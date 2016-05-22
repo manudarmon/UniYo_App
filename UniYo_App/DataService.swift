@@ -10,38 +10,21 @@ import Foundation
 import Firebase
 
 
-let URL_BASE = "https://uniyo.firebaseio.com/"
+let URL_BASE = FIRDatabase.database().reference()
 
 class DataService {
     static let ds = DataService()
 
-        private var _REF_BASE = Firebase(url: "\(URL_BASE)")
-        private var _REF_USERS = Firebase(url: "\(URL_BASE)/users")
+        var REF_BASE = URL_BASE
+        var REF_USERS = URL_BASE.child("users")
     
-        var REF_BASE : Firebase {
-            return _REF_BASE
-        }
-        
-        var REF_USERS : Firebase {
-            return _REF_USERS
-        }
-    
-        var REF_USER_CURRENT : Firebase {
+        var REF_USER_CURRENT : FIRDatabaseReference {
             let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) as! String
-            let user = Firebase(url: "\(URL_BASE)").childByAppendingPath("users").childByAppendingPath(uid)
-            return user!
+            let user = REF_BASE.child("users").child(uid)
+            return user
         }
         
         func createFirebaseUser(uid: String, user: Dictionary<String, String>) {
-            REF_USERS.childByAppendingPath(uid).setValue(user)
+            REF_USERS.child(uid).setValue(user)
         }
-
-    
-    
-//ADD CAMPUS NAMES LIST IN FIREBASE
-//private var _REF_CAMPUSES = Firebase(url: "\(URL_BASE)/campuses")
-//var REF_CAMPUSES : Firebase {
-//return _REF_CAMPUSES
-//}
-
 }

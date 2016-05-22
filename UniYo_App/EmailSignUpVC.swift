@@ -18,7 +18,7 @@ class EmailSignUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     @IBAction func attemptLogin(sender: UIButton!) {
         
         if let email = emailField.text where email != "", let pwd = passwordField.text where pwd != "" {
@@ -40,7 +40,7 @@ class EmailSignUpVC: UIViewController {
                                 
                                 
                                 // ####### START SAVE DATA IN FIREBASE #######
-
+                                
                                 DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: {
                                     err, authData in
                                     

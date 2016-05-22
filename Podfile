@@ -4,6 +4,8 @@
 use_frameworks!
 
 target 'UniYo_App' do
-pod 'Firebase', '>= 2.5.1'
+pod 'Firebase/Core'
+pod 'Firebase/Database'
+pod 'Firebase/Auth'
 end
 

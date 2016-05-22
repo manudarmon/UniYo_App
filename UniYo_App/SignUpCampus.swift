@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Foundation
 
 class SignUpCampus: UIViewController {
     @IBOutlet weak var campusField: UITextField!
@@ -17,7 +18,8 @@ class SignUpCampus: UIViewController {
     }
     
     @IBAction func campusContinue(sender: UIButton!) {
-        if let campus = campusField.text where campus != "" {
+        if let campusWhiteSpace: String = campusField.text where campusWhiteSpace != "" {
+            let campus = campusWhiteSpace.stringByReplacingOccurrencesOfString(" ", withString: "")
             addCampus(campus)
         } else {
             showErrorAllert("Campus required", msg: "Where are you studying?")
@@ -32,10 +34,8 @@ class SignUpCampus: UIViewController {
     }
     
     func addCampus(campus: String!) {
-        let campus: Dictionary<String, String> = ["Campus": campusField.text!]
+        let campus: Dictionary <String, String> = ["Campus": campusField.text!]
         DataService.ds.REF_USER_CURRENT.updateChildValues(campus)
-        //let campusID = DataService.ds.REF_CAMPUSES.childByAutoId()
-        //campusID.setValue(campusField.text!)
         campusField.text = ""
     }
 }
