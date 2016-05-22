@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
@@ -66,7 +67,7 @@ class ViewController: UIViewController {
                                 
                             })
                         }
-                })
+                }
             }
         })
         
