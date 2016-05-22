@@ -47,9 +47,9 @@ class ViewController: UIViewController {
                             print("Login failed. \(error)")
                         } else {
                             print("Logged in! \(user!.uid)")
-                            // ####### FACEBOOK LOGIN END #######
+        // ####### FACEBOOK LOGIN END #######
                             
-                            // ####### STORING USER DATA START #######
+        // ####### STORING USER DATA START #######
                             DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { (user, error) in
                                 
                                 if error != nil {
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
                                     NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: KEY_UID)
                                     self.performSegueWithIdentifier(SEGUE_SIGN_UP, sender: nil)
                                 }
-                                // ####### STORING USER DATA END #######
+        // ####### STORING USER DATA END #######
                                 
                             })
                         }
