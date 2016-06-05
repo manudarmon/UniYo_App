@@ -23,6 +23,6 @@ let SEGUE_LOG_IN = "fbk_log_in"
 let SEGUE_EMAIL_LOG_IN = "email_log_in"
 
 // Status Codes
-let STATUS_ACCOUNT_NONEXIST = -8
+let STATUS_ACCOUNT_NONEXIST = 17011
 
 

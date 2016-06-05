@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4631E8F7DC926663206809DF /* Pods_UniYo_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 293B0B194D53AED5DE689F83 /* Pods_UniYo_App.framework */; };
+		AF1DA28E1D00997E0046D837 /* SignUpPhotoName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1DA28D1D00997E0046D837 /* SignUpPhotoName.swift */; };
 		AF3B57591CD102B10096BDB3 /* SignUpCampus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3B57581CD102B10096BDB3 /* SignUpCampus.swift */; };
 		AF46E5FC1CEDC7FF00FBB630 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF46E5FB1CEDC7FF00FBB630 /* GoogleService-Info.plist */; };
 		AF565B121CB6B80A00677FB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF565B111CB6B80A00677FB2 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		293B0B194D53AED5DE689F83 /* Pods_UniYo_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniYo_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A394C681D4C7E0F5DC96CDB /* Pods-UniYo_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniYo_App.release.xcconfig"; path = "Pods/Target Support Files/Pods-UniYo_App/Pods-UniYo_App.release.xcconfig"; sourceTree = "<group>"; };
+		AF1DA28D1D00997E0046D837 /* SignUpPhotoName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPhotoName.swift; sourceTree = "<group>"; };
 		AF3B57581CD102B10096BDB3 /* SignUpCampus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCampus.swift; sourceTree = "<group>"; };
 		AF46E5FB1CEDC7FF00FBB630 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF565B0E1CB6B80A00677FB2 /* UniYo_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniYo_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 				AF3B57581CD102B10096BDB3 /* SignUpCampus.swift */,
 				AFC1DD281CD911CA006E8EF3 /* SignUpStudyField.swift */,
 				AFE243A31CE491A9002FAF72 /* SignUpCourses.swift */,
+				AF1DA28D1D00997E0046D837 /* SignUpPhotoName.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				AFC1DD291CD911CA006E8EF3 /* SignUpStudyField.swift in Sources */,
 				AF565B2B1CB7B39700677FB2 /* Constants.swift in Sources */,
 				AFB21B0B1CCE95CF0036BE69 /* DataService.swift in Sources */,
+				AF1DA28E1D00997E0046D837 /* SignUpPhotoName.swift in Sources */,
 				AFB21B0D1CCEA26F0036BE69 /* EmailSignUpVC.swift in Sources */,
 				AFE243A41CE491A9002FAF72 /* SignUpCourses.swift in Sources */,
 			);

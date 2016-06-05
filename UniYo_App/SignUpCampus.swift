@@ -1,5 +1,5 @@
 //
-//  SignUp_1.swift
+//  SignUpCampus.swift
 //  UniYo_App
 //
 //  Created by Emmanuel Darmon on 27/04/2016.

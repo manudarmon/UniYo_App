@@ -7,16 +7,15 @@
 //
 
 import UIKit
-import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Firebase
 import FirebaseAuth
 
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -30,7 +29,6 @@ class ViewController: UIViewController {
     @IBAction func BtnFbkPressed(sender: UIButton!) {
         
         // ####### FACEBOOK LOGIN START #######
-        let ref = URL_BASE
         let facebookLogin = FBSDKLoginManager()
         facebookLogin.logInWithReadPermissions(["email"], handler: {
             (facebookResult, facebookError) -> Void in
@@ -41,36 +39,29 @@ class ViewController: UIViewController {
                 print("Facebook login was cancelled.")
             } else {
                 let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
-                let credential = FIRFacebookAuthProvider.credentialWithAccessToken(accessToken)
-                FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
+                print("Successfuly login with Facebook \(accessToken)")
+                
+                let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+                FIRAuth.auth()?.signInWithCredential(credential, completion: { (user, error) in
                         if error != nil {
                             print("Login failed. \(error)")
                         } else {
-                            print("Logged in! \(user!.uid)")
-        // ####### FACEBOOK LOGIN END #######
+                            print("Logged in! \(user)")
                             
-        // ####### STORING USER DATA START #######
-                            DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { (user, error) in
-                                
-                                if error != nil {
-                                    print("Login failed. \(error)")
-                                } else {
-                                    print("Loged in!\(user!.uid)")
+                            // ####### FACEBOOK LOGIN END #######
+                            
+                            // ####### STORING USER DATA START #######
                                     
-                                    let user = ["provider": user!.provider!]
-                                    DataService.ds.createFirebaseUser(user!.uid, user: user!.uid)
+                                    let userData = ["provider": credential.provider]
+                                    DataService.ds.createFirebaseUser(user!.uid, user: userData)
                                     
                                     NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: KEY_UID)
                                     self.performSegueWithIdentifier(SEGUE_SIGN_UP, sender: nil)
                                 }
-        // ####### STORING USER DATA END #######
+                                // ####### STORING USER DATA END #######
                                 
                             })
                         }
-                }
+                })
             }
-        })
-        
-    }
-    
-}
+        }

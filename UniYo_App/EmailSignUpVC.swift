@@ -24,31 +24,23 @@ class EmailSignUpVC: UIViewController {
         
         if let email = emailField.text where email != "", let pwd = passwordField.text where pwd != "" {
             
-            DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: {
-                error, user in
-                
+            FIRAuth.auth()?.signInWithEmail(email, password: pwd, completion: {(user, error) in
+            
                 if error != nil {
                     
-                    print(error.code)
+                    print(error)
                     
-                    if error.code == STATUS_ACCOUNT_NONEXIST {
-                        DataService.ds.REF_BASE.createUser(email, password: pwd, withValueCompletionBlock: { error, result in
-                            
+                    if error!.code == STATUS_ACCOUNT_NONEXIST {
+                        FIRAuth.auth()?.createUserWithEmail(email, password: pwd, completion: {(user, error) in
                             if error != nil {
                                 self.showErrorAllert("Could not create your account", msg: "Problem creating account. Try something else")
                             } else {
-                                NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
-                                
+                                NSUserDefaults.standardUserDefaults().setValue(user?.uid, forKey: KEY_UID)
                                 
                                 // ####### START SAVE DATA IN FIREBASE #######
                                 
-                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: {
-                                    err, user in
-                                    
-                                    let user = ["provider": user.provider!, "email": email, "Password": pwd]
-                                    DataService.ds.createFirebaseUser(user!.uid, user: user)
-                                    
-                                })
+                                    let userData = ["provider": "email"]
+                                    DataService.ds.createFirebaseUser(user!.uid, user: userData)
                                 
                                 // ####### END SAVE DATA IN FIREBASE #######
                                 
