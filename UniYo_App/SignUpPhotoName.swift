@@ -24,44 +24,33 @@ class SignUpPhotoName: UIViewController, UIImagePickerControllerDelegate, UINavi
         super.viewDidLoad()
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        
-        // IF USER SIGNED UP WITH FACEBOOK {
-            //DOWNLOAD FACEBOOK PROFILE PICTURE
-            //SHOW FACEBOOK PROFILE PICTURE
-        //}
     }
-
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
-        imageSelectorImage.image = image
-    }
-    
     
     @IBAction func selectImage(sender: UITapGestureRecognizer) {
         presentViewController(imagePicker, animated: true, completion: nil)
-        
-        //var storageRef: FIRStorageReference!
-        //let storage = FIRStorage.storage()
-        //func configureStorage() {
-            //storageRef = FIRStorage.storage().referenceForURL("gs://project-693707092233493332.appspot.com")
         }
+    
+    let storage = FIRStorage.storage()
+    let storageRef = FIRStorage.storage().referenceForURL("gs://project-693707092233493332.appspot.com")
+    func configureStorage() {
+        storageRef
+    }
     
     @IBAction func photoNameContinue(sender: UIButton!) {
         
-        // let uPic = profilePicture.image
+        // SAVE imagePicker in Firebase Storage
+        
         let uName = firstlastname.text
-        
-        // if uPic == "Photo_default" {
-            // showErrorAllert("You need a profile picture", msg: "We know you are beautiful")
-        // } else {
-            //UPLOAD IMAGE TO FIREBASE
-        // }
-        
         if uName == ""  {
             showErrorAllert("What is your name ?", msg: "We need your full name.")
         } else {
             addName("Name", nameTextField: firstlastname);
         }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        imageSelectorImage.image = image
     }
     
     func addName(keyName: String!, nameTextField: UITextField!) {

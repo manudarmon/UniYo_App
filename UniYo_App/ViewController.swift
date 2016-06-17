@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
         // ####### FACEBOOK LOGIN START #######
         let facebookLogin = FBSDKLoginManager()
-        facebookLogin.logInWithReadPermissions(["email"], handler: {
+        facebookLogin.logInWithReadPermissions(["public_profile", "email", "user_friends"], handler: {
             (facebookResult, facebookError) -> Void in
             
             if facebookError != nil {
